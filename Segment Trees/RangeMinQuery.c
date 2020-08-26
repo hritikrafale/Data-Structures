@@ -42,17 +42,6 @@ int main()
         }
     }
 
-    /*printf("\nst:");
-    for(i=0;i<2*size-1;i++)
-        printf("%lld ",segtree[i]);
-    printf("\n");
-
-    update(segtree,size,0,3-arr[0]);
-
-    printf("\nst:");
-    for(i=0;i<2*size-1;i++)
-        printf("%lld ",segtree[i]);*/
-
     return 0;
 }
 
@@ -101,8 +90,6 @@ void update(long long int segtree[],int size,int i,long long int diff)
     while(index!=0)
     {
         index=(index%2==0)?(index-2)/2:index/2;
-       // index/=2;
         segtree[index]=min(segtree[2*index+1],segtree[2*index+2]);
     }
-    //segtree[0]=min(segtree[1],segtree[2]);
 }
