@@ -73,7 +73,7 @@ void unions(int parent[],int rank[],int x,int y){
 		
 		
 	if(rank[x_rep]<rank[y_rep]){
-		parent[x_rep]=y_rep;
+		parent[y_rep]=y_rep;
 	}
 	else if(rank[x_rep]>rank[y_rep]){
 		parent[x_rep]=y_rep;
